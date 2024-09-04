@@ -1,7 +1,3 @@
-¡Claro! Aquí tienes un ejemplo de archivo `README.md` para el sistema que describes:
-
----
-
 # Sistema de Gestión Regulatoria (SGR)
 
 Este sistema está diseñado para gestionar y analizar requerimientos regulatorios utilizando PHP, JavaScript y MariaDB. Permite el análisis automático de reportes de auditoría, el análisis de auditorías mediante puntos listados, y la carga de nuevas normativas con sus respectivos puntos a cumplir.
