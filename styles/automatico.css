@@ -1,0 +1,125 @@
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 900px; /* Establece un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    padding: 20px; /* Espacio interno alrededor del contenido del contenedor */
+    border-radius: 8px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+}
+
+/* Estilos para los títulos principales */
+h1, h2 {
+    text-align: center; /* Centra el texto de los títulos */
+}
+
+/* Estilo del formulario de carga de archivos */
+#file-form {
+    display: flex; /* Utiliza flexbox para el diseño del formulario */
+    flex-direction: column; /* Coloca los elementos del formulario en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Espaciado para el campo de entrada de archivo */
+#file-input {
+    margin-bottom: 15px; /* Añade margen inferior para separar el botón del campo de entrada */
+}
+
+/* Estilo del botón de validación */
+#validate-btn {
+    padding: 10px 20px; /* Espaciado interno del botón */
+    background-color: #4CAF50; /* Color de fondo verde del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto hover para el botón de validación */
+#validate-btn:hover {
+    background-color: #45a049; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+/* Estilo del indicador de carga */
+#loading {
+    text-align: center; /* Centra el texto del indicador de carga */
+    margin-top: 20px; /* Añade margen superior */
+}
+
+/* Estilo del loader animado (spinner) */
+.loader {
+    border: 16px solid #f3f3f3; /* Borde del spinner */
+    border-top: 16px solid #3498db; /* Borde superior con color diferente para animación */
+    border-radius: 50%; /* Hace que el spinner sea un círculo */
+    width: 60px; /* Ancho del spinner */
+    height: 60px; /* Altura del spinner */
+    animation: spin 2s linear infinite; /* Animación de giro continuo */
+    margin: 0 auto; /* Centra el spinner */
+}
+
+/* Definición de la animación del spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Empieza en 0 grados */
+    100% { transform: rotate(360deg); } /* Gira hasta 360 grados */
+}
+
+/* Margen superior para la sección de resultados */
+#results {
+    margin-top: 20px; /* Espacio encima de los resultados */
+}
+
+/* Margen superior para la sección de resultados acumulados */
+#all-results {
+    margin-top: 30px; /* Espacio encima de los resultados acumulados */
+}
+
+/* Estilos para la tabla de resultados */
+#results-table {
+    width: 100%; /* Ancho completo de la tabla */
+    border-collapse: collapse; /* Combina los bordes de la tabla */
+    margin-top: 20px; /* Espacio encima de la tabla */
+}
+
+/* Estilos para las celdas de la tabla */
+#results-table th, #results-table td {
+    border: 1px solid #ddd; /* Borde de las celdas */
+    padding: 8px; /* Espaciado interno de las celdas */
+    text-align: center; /* Centra el texto dentro de las celdas */
+}
+
+/* Estilos para las cabeceras de la tabla */
+#results-table th {
+    background-color: #4CAF50; /* Fondo verde para las cabeceras */
+    color: white; /* Texto blanco para las cabeceras */
+}
+
+/* Estilo para las filas pares de la tabla (zebra stripe) */
+#results-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo gris claro para las filas pares */
+}
+
+/* Efecto hover para las filas de la tabla */
+#results-table tr:hover {
+    background-color: #ddd; /* Fondo gris claro al pasar el ratón sobre las filas */
+}
+
+/* Estilos generales para los botones de acción */
+.button-action {
+    padding: 5px 10px; /* Espaciado interno para los botones de acción */
+    margin: 0 5px; /* Margen entre botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+    color: #fff; /* Color del texto blanco */
+}
+
+/* Estilo para el botón de editar */
+.button-edit {
+    background-color: #4CAF50; /* Color de fondo verde */
+}
+
+/* Estilo para el botón de eliminar */
+.button-delete {
+    background-color: #f44336; /* Color de fondo rojo */
+}

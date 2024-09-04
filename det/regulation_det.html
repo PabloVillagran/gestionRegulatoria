@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Normativas</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav include-html="../navbar.php">
+        </nav>
+    </header>
+
+    <main>
+        <h2>Detalle de Normativa</h2>
+        <button id="add-regulation-btn">Agregar artículo de cumplimiento</button>
+        <table id="regulations-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Descripci&oacute;n</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se llenarán dinámicamente -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Modal para agregar una nueva normativa -->
+    <div id="regulation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Normativa</h2>
+            <form id="add-regulation-form" action="./add_regulation_det.php" method="POST">
+                <label for="description">Descripci&oacute;n:</label>
+                <textarea from="add-regulation-form" type="text" id="description" name="description" rows="5" placeholder="Agregar la Descripci&oacute;n del art&iacute;culo a definir." required>
+                </textarea>
+                <input type="hidden" id="regulation-id" name="regulation-id">
+                <button type="submit">Agregar a la Normativa</button> 
+            </form>
+        </div>
+    </div>
+
+    <script src="../scripts/include.js"></script>
+    <script src="../scripts/det_regulation.js"></script>
+</body>
+</html>

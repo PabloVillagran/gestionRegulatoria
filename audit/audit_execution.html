@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Normativas</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav include-html="../navbar.php">
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="audit-title">Auditor&iacute;a</h2>
+        <!-- <button id="add-regulation-btn">Iniciar Auditor&iacute;a</button> -->
+        <form id="audit-details-form" action="post_audit_details.php" method="POST" >
+            <input type="hidden" id="audit_id" name="audit_id">
+            <table id="audits-table">
+                <thead>
+                    <tr>
+                        <th>Descripci&oacute;n</th>
+                        <th>Aplica</th>
+                        <th>Cumple</th>
+                        <th>Comentarios</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Las filas de la tabla se llenarán dinámicamente -->
+                </tbody>
+            </table>
+            <button type="submit">Confirmar Auditor&iacute;a</button>
+        </form>
+        <a id="report-link" href=""><button id="reporte">Generar Reporte</button></a>
+    </main>
+
+    <script src="../scripts/det_audit.js"></script>
+    <script src="../scripts/include.js"></script>
+</body>
+</html>

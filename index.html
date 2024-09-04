@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Normativas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/automatico.css">
+</head>
+<body>
+    <header>
+        <nav include-html="navbar.php">
+        </nav>
+    </header>
+
+    <main>
+        <div class="container"> <!-- Contenedor principal para centrar el contenido y aplicar estilos -->
+            <h1>Validador de Estándares de la Empresa</h1> <!-- Título principal de la página -->
+    
+            <!-- Formulario para cargar el archivo que se va a validar -->
+            <form id="file-form">
+                <input type="file" id="file-input" accept=".txt,.csv,.xlsx,.pdf" /> <!-- Input para seleccionar un archivo, aceptando ciertos formatos -->
+                <select id="regulation-selection" name="regulation-selection">
+                    <!-- Las filas de la tabla se llenarán dinámicamente -->
+                </select>
+                <button type="button" id="validate-btn">Validar Documento</button> <!-- Botón para iniciar la validación del documento -->
+            </form>
+    
+            <!-- Sección de carga mientras se analiza el archivo -->
+            <div id="loading" style="display: none;"> <!-- Oculto por defecto, se muestra durante el análisis del documento -->
+                <p>Analizando documento...</p> <!-- Mensaje de carga -->
+                <div class="loader"></div> <!-- Elemento de carga, puede ser un spinner o animación de carga -->
+            </div>
+            
+            <div id="chart-container" style="display:none;" >
+                <canvas id="chart-canvas"></canvas>
+            </div>
+
+            <!-- Sección donde se mostrarán los resultados de la validación del archivo actual -->
+            <div id="results">
+                <!-- Los resultados de la validación actual se mostrarán aquí -->
+            </div>
+    
+            <!-- Sección para mostrar todos los resultados acumulados de las validaciones -->
+            <div id="all-results">
+                <h2>Resultados Acumulados</h2> <!-- Subtítulo para la tabla de resultados acumulados -->
+    
+                <!-- Tabla para mostrar todos los resultados de los archivos validados -->
+                <table id="results-table">
+                    <thead> <!-- Encabezado de la tabla -->
+                        <tr>
+                            <th>ID</th> <!-- Columna para el identificador del análisis -->
+                            <th>Nombre del Documento</th> <!-- Columna para el nombre del archivo analizado -->
+                            <th>Fecha de Análisis</th> <!-- Columna para la fecha en que se realizó el análisis -->
+                            <th>País</th> <!-- Columna para el país (predeterminado como Guatemala, se puede cambiar) -->
+                            <th>Acciones</th> <!-- Columna para acciones disponibles como descargar o borrar el resultado -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los resultados de todos los análisis se insertarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        <!-- Importación de la librería PDF.js para manejar archivos PDF -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+        <!-- Importación del archivo de script donde está la lógica de análisis y validación -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </main>
+
+    <script src="scripts/analisis.js"></script>
+    <script src="scripts/include.js"></script>
+</body>
+</html>

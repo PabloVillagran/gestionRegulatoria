@@ -1,0 +1,33 @@
+-- Active: 172517172(6718@@127), \n0), \n0), \n1@330(6@compliance_tool_db
+INSERT INTO regulations(country, `date`, name) values('Panamá', STR_TO_DATE('14/06/2022', '%d/%m/%Y'), 'Acuerdo No. 006-2022');
+
+INSERT INTO det_regulations(regulations_id, `Description`) values
+(6, 'Se incluye la Nacionalidad del cliente como parte de los datos almacenados'),
+(6, 'Se incluye el País de nacimiento o país de constitución del cliente como parte de los datos almacenados'),
+(6, 'Se incluye el País de domicilio del cliente como parte de los datos almacenados'),
+(6, 'Se incluye la Profesión u oficio del cliente como parte de los datos almacenados'),
+(6, 'Se incluye la Zona geográfica de las actividades del negocio del cliente'),
+(6, 'Se incluye la Actividad económica y financiera del cliente'),
+(6, 'Se incluye el Tipo de estructura jurídica utilizada por el cliente para el desarrollo de sus actividades'),
+(6, 'Se incluye el Tipo, monto y frecuencia de las transacciones del cliente como parte de los datos almacenados'),
+(6, 'Se incluye el Origen de los recursos financieros del cliente como parte de los datos almacenados'),
+(6, 'Se incluye si el cliente es una persona expuesta politicamente (PEP)'),
+(6, 'Se incluyen los Productos, servicios y canales utilizados por el cliente para sus actividades financieras'),
+(6, 'Se elabora un perfil de riesgo del cliente antes de iniciar la relación comercial'),
+(6, 'Se realiza la debida diligencia sobre el beneficiario final cuando el cliente actúe como intermediario'),
+(6, 'Se obtiene información sobre el propósito de la relación comercial'),
+(6, 'Se cumple con la evaluación del perfil financiero y transaccional del cliente'),
+(6, 'Se documentan todas las diligencias realizadas para identificar al cliente y/o beneficiario final'),
+(6, 'Se someten las relaciones con clientes extranjeros a medidas de debida diligencia'),
+(6, 'Se identifica a los beneficiarios finales del fideicomiso'),
+(6, 'Se consolida toda la información requerida en un solo expediente'),
+(6, 'Se identifican a los dignatarios, directores, apoderados y representantes legales de personas jurídicas'),
+(6, 'Se identifica al protector, asesores u otras personas en fideicomisos'),
+(6, 'Se conoce al beneficiario final de personas jurídicas'),
+(6, 'Se identefica si la persona jurídica tiene miembros provistos por un agente residente'),
+(6, 'Se identifica a los accionistas con un porcentaje igual o mayor al 10% por medio de documentos válidos'),
+(6, 'Se solicitan documentos que evidencien el nombre del beneficiario final y titular de las acciones'),
+(6, 'Se solicita Declaración Jurada en la cual se indique la información de los propietarios de las acciones nominativas'),
+(6, 'Se solicita Copia del certificado de acción en el que se evidencia el nombre del propietario de las acciones nominativas'),
+(6, 'Se solicita Copia del registro de acciones'),
+(6, 'Se solicita Certificación del agente residente donde indique las personas naturales o beneficiarios finales propietarios de las acciones nominativas');

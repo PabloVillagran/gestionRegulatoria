@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Normativas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav include-html="navbar.php">
+        </nav>
+    </header>
+
+    <main>
+        <h2>Auditor&iacute;a</h2>
+        <button id="add-regulation-btn">Iniciar Auditor&iacute;a</button>
+        <table id="audits-table">
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Normativa</th>
+                    <th>Fecha y Hora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se llenarán dinámicamente -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Modal para agregar una nueva normativa -->
+    <div id="audit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar Auditor&iacute;a</h2>
+            <form id="add-regulation-form" action="audit/add_audit.php" method="POST">
+                <label for="name">Nombre de la empresa:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="regulation-selection">Normativa:</label>
+                <select id="regulation-selection" name="regulation-selection">
+                    <!-- Las filas de la tabla se llenarán dinámicamente -->
+                </select>
+                <button type="submit">Iniciar Autidor&iacute;a</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/audit.js"></script>
+    <script src="scripts/include.js"></script>
+</body>
+</html>

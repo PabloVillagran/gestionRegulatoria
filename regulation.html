@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Normativas</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav include-html="navbar.php">
+        </nav>
+    </header>
+
+    <main>
+        <h2>Lista de Normativas</h2>
+        <button id="add-regulation-btn">Agregar Normativa</button>
+        <table id="regulations-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>País</th>
+                    <th>Fecha de validez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de la tabla se llenarán dinámicamente -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Modal para agregar una nueva normativa -->
+    <div id="regulation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Normativa</h2>
+            <form id="add-regulation-form" action="includes/add_regulation.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="country">País:</label>
+                <input type="text" id="country" name="country" required>
+                <label for="date">Fecha de Publicación:</label>
+                <input type="date" id="date" name="date" required>
+                <button type="submit">Agregar Normativa</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/regulation.js"></script>
+    <script src="scripts/include.js"></script>
+</body>
+</html>
